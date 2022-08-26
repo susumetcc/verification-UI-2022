@@ -1,26 +1,41 @@
-html,
+:root {
+  /* Accent */
+  --color-Accent-900: #015C33;
+    --color-Accent-800: #006837;
+    --color-Accent-700: #1E794E;
+    --color-Accent-600: #3D8A65;
+    --color-Accent-500: #5B9B7B;
+    --color-Accent-400: #79AC92;
+    --color-Accent-300: #97BCA9;
+    --color-Accent-200: #BDCDC0;
+    --color-Accent-100: #D4DED6;
+    --color-Accent-050: #E3E7E2;
+
+    /* Gray */
+    --color-Gray-900: #1D1C2C;
+    --color-Gray-800: #333140;
+    --color-Gray-700:  #484653;
+    --color-Gray-600: #5D5B66;
+    --color-Gray-500: #737079;
+    --color-Gray-400: #88868D;
+    --color-Gray-300: #B2B0B3;
+    --color-Gray-200: #C7C5C6;
+    --color-Gray-100: #DDDADA;
+    --color-Gray-050: #E8E4E3;
+
+    /* Black and White */
+    --color-Black-1000: #080719;
+    --color-White-000: #F2EFED;
+}
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  max-width: 375px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@media screen and (max-width: 390px) {
   body {
-    color: white;
-    background: black;
+    width: 100vw;
   }
 }
