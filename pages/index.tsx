@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   const handleShareButton = () => {
     navigator.share(
       {
-        url: `https://www.youtube.com/`
+        url: `https://lustrous-cupcake-7e2189.netlify.app/`
       }
     )
   }
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div css={hoge}>
-        <Image src={titleImage} width={375} height={375} />
+        <Image src={titleImage} layout={"responsive"} priority/>
       </div>
       <div css={nameBox}>
         <p css={nameText}>みんち</p>
@@ -63,21 +63,26 @@ color: var(--color-Gray-800);
 display: flex;
 align-items: center;
 justify-content: center;
+height: 48px;
 `;
 const shareIcon = css`
 margin-left: auto;
-margin-right: 8px;
+margin-right: 3vw;
 `;
 const titleBoxText = css`
   font-size: 16px;
   display: flex;
-  margin-left: 37vw;
+  margin-left: 40vw;
 `;
 const hoge = css`
+width: 96vw;
+margin: 0 2vw;
 `;
 const nameBox = css`
 display: flex;
+height: 86px;
 justify-content: space-between;
+align-items: center;
 margin: 0 18px;
 `;
 const nameText = css`
@@ -94,5 +99,6 @@ grid-template-columns: repeat(3,1fr);
 grid-template-rows: repeat(3,1fr);
 column-gap: 4px;
 row-gap: 4px;
+margin: 0 2vw;
 `;
 export default Home
