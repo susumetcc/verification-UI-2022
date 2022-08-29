@@ -44,7 +44,7 @@ export const DetailTwo: NextPage = () => {
                     <div css={post_txt}>
                         <p>☆JILLSTUARTの新作・数量限定品</p>
                         <p>☆星座によってデザインが違う</p>
-                        <p>☆水分量で反応して"その人だけの色"に発色</p>
+                        <p>☆水分量で反応して&quot;その人だけの色&quot;に発色</p>
                         <p>という最高のギミック...可愛すぎません!?🥺</p>
                         <p>これに落ちない乙女はいない...</p>
                     </div>
