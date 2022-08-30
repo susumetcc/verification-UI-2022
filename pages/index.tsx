@@ -18,7 +18,9 @@ const Home: NextPage = () => {
   const handleShareButton = () => {
     navigator.share(
       {
-        url: `https://lustrous-cupcake-7e2189.netlify.app/`
+        title: "SelectBook",
+        text: "SelectBook 買ってよかったものセレクト",
+        url: 'https://lustrous-cupcake-7e2189.netlify.app/'
       }
     )
   }
@@ -27,28 +29,28 @@ const Home: NextPage = () => {
       <div css={titleBox} onClick={handleShareButton}>
         <p css={titleBoxText}>minch_pooh</p>
         <div css={shareIcon}>
-        <ShareIcon />
+          <ShareIcon />
         </div>
       </div>
       <div css={hoge}>
-        <Image src={titleImage} layout={"responsive"} priority/>
+        <Image src={titleImage} layout={"responsive"} priority />
       </div>
       <div css={nameBox}>
         <p css={nameText}>みんち</p>
         <div css={snsIcons}>
-        <YoutubeIcon/>
-        <InstagramIcon/>
-        <TwitterIcon/>
-        <TikTokIcon/>
+          <a href="https://www.youtube.com/channel/UCMj894p-S4r5feXAPqDRBUg" target="_blank" rel="noopener noreferrer"><YoutubeIcon /></a>
+          <a href="https://www.instagram.com/minchi_pooh/?hl=ja" target="_blank" rel="noopener noreferrer"><InstagramIcon /></a>
+          <a href="https://twitter.com/minchi_pooh" target="_blank" rel="noopener noreferrer"><TwitterIcon /></a>
+          <a href="https://www.tiktok.com/@minchi_pooh" target="_blank" rel="noopener noreferrer"><TikTokIcon /></a>
         </div>
       </div>
       <div css={gridImage}>
-          <Image src={grid1} width={120} height={120}/>
-          <Image src={grid2} width={120} height={120}/>
-          <Image src={grid3} width={120} height={120}/>
-          <Image src={grid4} width={120} height={120}/>
-          <Image src={grid5} width={120} height={120}/>
-        </div>
+        <Image src={grid1} width={120} height={120} />
+        <Image src={grid2} width={120} height={120} />
+        <Image src={grid3} width={120} height={120} />
+        <Image src={grid4} width={120} height={120} />
+        <Image src={grid5} width={120} height={120} />
+      </div>
     </div>
   )
 }
@@ -93,7 +95,7 @@ display: flex;
 align-items: center;
 gap: 8px;
 `;
-const gridImage =css`
+const gridImage = css`
 display: grid;
 grid-template-columns: repeat(3,1fr);
 grid-template-rows: repeat(3,1fr);

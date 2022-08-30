@@ -16,7 +16,9 @@ export const DetailTwo: NextPage = () => {
     const handleShareButton = () => {
         navigator.share(
             {
-                url: `https://www.youtube.com/`
+                title:"SelectBook",
+                text: "SelectBook 買ってよかったものセレクト",
+                url: 'https://lustrous-cupcake-7e2189.netlify.app/'
             }
         )
     }
