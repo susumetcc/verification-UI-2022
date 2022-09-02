@@ -30,9 +30,7 @@ export const Detail: NextPage = () => {
                     <ShareIcon />
                 </div>
             </div>
-            <div css={DetailImage}>
-                <Image src={Detail1} width={343} height={343} />
-            </div>
+                <Image src={Detail1} layout={"responsive"} css={DetailImage}/>
             <div css={userContainer}>
                 <div css={user}>
                     <p css={userItemIndex}>ミニマルと高音質</p>
@@ -71,12 +69,12 @@ export const Detail: NextPage = () => {
 }
 const main = css`
 color:  var(--color-Black-1000);
+margin: 0 16px;
 `;
 const titleBox = css`
 display: flex;
 align-items: center;
 justify-content: space-between;
-margin: 0 12px;
 height: 48px;
 `;
 const titleBoxText = css``;
@@ -87,10 +85,10 @@ const DetailImage = css`
 display: flex;
 justify-content: center;
 align-items: center;
-width: 100vw;
+
 `;
 const userContainer = css`
-margin: 32px 12px;
+margin: 32px 0;
 `;
 const userItemIndex = css`
 font-weight: bold;
@@ -132,7 +130,6 @@ const detailText = css`
 font-size: 12px;
 `;
 const otherItemBox = css`
-margin: 0 12px;
 display: flex;
 align-items: center;
 `;

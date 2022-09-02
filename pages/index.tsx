@@ -32,9 +32,7 @@ const Home: NextPage = () => {
           <ShareIcon />
         </div>
       </div>
-      <div css={hoge}>
-        <Image src={titleImage} layout={"responsive"} priority />
-      </div>
+        <Image src={titleImage} layout={"responsive"} />
       <div css={nameBox}>
         <p css={nameText}>みんち</p>
         <div css={snsIcons}>
@@ -76,10 +74,6 @@ const titleBoxText = css`
   display: flex;
   margin-left: 40vw;
 `;
-const hoge = css`
-width: 96vw;
-margin: 0 2vw;
-`;
 const nameBox = css`
 display: flex;
 height: 86px;
@@ -93,7 +87,7 @@ font-size: 18px;
 const snsIcons = css`
 display: flex;
 align-items: center;
-gap: 8px;
+gap: 16px;
 `;
 const gridImage = css`
 display: grid;

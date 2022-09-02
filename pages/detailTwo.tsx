@@ -31,9 +31,7 @@ export const DetailTwo: NextPage = () => {
                     <ShareIcon />
                 </div>
             </div>
-            <div css={DetailImage}>
-                <Image src={Detail2} width={343} height={343} />
-            </div>
+                <Image src={Detail2} layout={"responsive"} />
             <div css={userContainer}>
                 <div css={user}>
                     <p css={userItemIndex}>ミニマルと高音質</p>
@@ -74,6 +72,7 @@ export const DetailTwo: NextPage = () => {
 }
 const main = css`
 color:  var(--color-Black-1000);
+margin: 0 16px;
 `;
 const titleBox = css`
 display: flex;
@@ -86,22 +85,13 @@ const titleBoxText = css``;
 const shareIcon = css`
 margin-right: 8px;
 `;
-const DetailImage = css`
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100vw;
-`;
 const userContainer = css`
-margin: 32px 12px;
+margin: 32px 0;
 `;
 const userItemIndex = css`
 font-weight: bold;
 font-size: 16px;
 margin: 18px 0;
-`;
-const user = css`
-
 `;
 const profile = css`
 display: flex;
@@ -156,4 +146,5 @@ grid-template-rows: repeat(3,1fr);
 column-gap: 4px;
 row-gap: 4px;
 `;
+const user=css``;
 export default DetailTwo;
