@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import { css } from '@emotion/react'
+import { Global, css } from '@emotion/react'
 import { ShareIcon } from '../components/icons/shareIcon';
 import { YoutubeIcon } from '../components/icons/social-media/youtube';
 import { InstagramIcon } from '../components/icons/social-media/instagram';
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           <ShareIcon />
         </div>
       </div>
-        <Image src={titleImage} layout={"responsive"} />
+      <Image src={titleImage} layout={"responsive"} />
       <div css={nameBox}>
         <p css={nameText}>みんち</p>
         <div css={snsIcons}>
