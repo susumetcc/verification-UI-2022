@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Head from 'next/head';
 import Image from 'next/image'
 import { Global, css } from '@emotion/react'
 import { ShareIcon } from '../components/icons/shareIcon';
@@ -26,6 +27,9 @@ const Home: NextPage = () => {
   }
   return (
     <div css={main}>
+      <Head>
+        <title>SelectBook-β</title>
+      </Head>
       <div css={titleBox} onClick={handleShareButton}>
         <p css={titleBoxText}>minch_pooh</p>
         <div css={shareIcon}>

@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { ShareIcon } from '../components/icons/shareIcon';
@@ -16,22 +17,25 @@ export const DetailTwo: NextPage = () => {
     const handleShareButton = () => {
         navigator.share(
             {
-                title:"SelectBook",
+                title: "SelectBook",
                 text: "SelectBook 買ってよかったものセレクト",
                 url: 'https://lustrous-cupcake-7e2189.netlify.app/'
             }
         )
     }
-    return(
+    return (
         <div css={main}>
-<div css={titleBox} onClick={handleShareButton}>
+            <Head>
+                <title>SelectBook-β</title>
+            </Head>
+            <div css={titleBox} onClick={handleShareButton}>
                 <RightArrow />
                 <p css={titleBoxText}>みんち</p>
                 <div css={shareIcon}>
                     <ShareIcon />
                 </div>
             </div>
-                <Image src={Detail2} layout={"responsive"} />
+            <Image src={Detail2} layout={"responsive"} />
             <div css={userContainer}>
                 <div css={user}>
                     <p css={userItemIndex}>ミニマルと高音質</p>
@@ -146,5 +150,5 @@ grid-template-rows: repeat(3,1fr);
 column-gap: 4px;
 row-gap: 4px;
 `;
-const user=css``;
+const user = css``;
 export default DetailTwo;

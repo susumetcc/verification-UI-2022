@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { ShareIcon } from '../components/icons/shareIcon';
@@ -15,7 +16,7 @@ export const Detail: NextPage = () => {
     const handleShareButton = () => {
         navigator.share(
             {
-                title:"SelectBook",
+                title: "SelectBook",
                 text: "SelectBook 買ってよかったものセレクト",
                 url: 'https://lustrous-cupcake-7e2189.netlify.app/'
             }
@@ -23,6 +24,9 @@ export const Detail: NextPage = () => {
     }
     return (
         <div css={main}>
+            <Head>
+                <title>SelectBook-β</title>
+            </Head>
             <div css={titleBox} onClick={handleShareButton}>
                 <RightArrow />
                 <p css={titleBoxText}>minch_pooh</p>
@@ -30,7 +34,7 @@ export const Detail: NextPage = () => {
                     <ShareIcon />
                 </div>
             </div>
-                <Image src={Detail1} layout={"responsive"} css={DetailImage}/>
+            <Image src={Detail1} layout={"responsive"} css={DetailImage} />
             <div css={userContainer}>
                 <div css={user}>
                     <p css={userItemIndex}>ミニマルと高音質</p>
